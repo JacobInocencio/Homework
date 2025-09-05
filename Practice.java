@@ -1,103 +1,59 @@
-package Homework;
+package Homework; // Declares the package (folder) this class belongs to
 
-/**
- * //PART ONE: MODULUS
-//What would each of the following 1-6 lines including the modulo operator cause to be printed?
-     System.out.println(14 % 13);
-     System.out.println(8 % 11);
-     System.out.println(6 % 2);
-     System.out.println(7 % 2);
-     System.out.println(274 % 10);
-     System.out.println(881 % 2);
+public class ModulusCompoundOperatorsAndCastingPractice { // Defines the class
+    public static void main(String[] args) { // Main method, program starts here
+        
+        // =====================
+        // PART ONE: MODULUS
+        // =====================
+        System.out.println("PART ONE: MODULUS"); // Print section title
 
-//PART TWO: COMPOUND OPERATORS AND SHORTCUTS (credits to runestone.academy)
+        System.out.println(14 % 13);  // Prints remainder of 14 ÷ 13 → 1
+        System.out.println(8 % 11);   // Prints remainder of 8 ÷ 11 → 8
+        System.out.println(6 % 2);    // Prints remainder of 6 ÷ 2 → 0
+        System.out.println(7 % 2);    // Prints remainder of 7 ÷ 2 → 1
+        System.out.println(274 % 10); // Prints remainder of 274 ÷ 10 → 4
+        System.out.println(881 % 2);  // Prints remainder of 881 ÷ 2 → 1
+        System.out.println();         // Prints a blank line for spacing
 
-    int x = 0;
-    int y = 1;
-    int z = 2;
-    x--; // x followed by the double minus sign
-    y++;
-    z+=y;
-//After the above code runs, what are x, y, and z equal to?
+        // =====================
+        // PART TWO: COMPOUND OPERATORS
+        // =====================
+        System.out.println("PART TWO: COMPOUND OPERATORS"); // Print section title
 
-    int a = 3;
-    int b = 5;
-    int c = 2;
-    a = c * 2;
-    b = b / 2;
-    c++;
-//After the above code runs, what are a, b, and c equal to?
+        int x = 0, y = 1, z = 2; // Declare three variables x=0, y=1, z=2
 
-//PART THREE: CASTING
+        x--;    // Decrease x by 1 → x = -1
+        y++;    // Increase y by 1 → y = 2
+        z += y; // Add y to z → z = 2 + 2 = 4
 
-    int total = 5 + 7 + 2;
-    (double) (total / 3); //Option A
-    total / 3; //Option B
-    (double) total / 3; //Option C
+        // Print results of first block
+        System.out.println("x = " + x + ", y = " + y + ", z = " + z);
 
-//Which of the above options correctly computes the average of total? Why do the other options not work?
- */
+        int a = 3, b = 5, c = 2; // Declare three variables a=3, b=5, c=2
 
-public class ModulusCompoundOperatorsAndCastingPractice {
+        a = c * 2; // Multiply c by 2 and store in a → a = 4
+        b = b / 2; // Divide b by 2 (integer division) → b = 2
+        c++;       // Increase c by 1 → c = 3
 
-	public static void main(String[] args) {
-		
-		        // =========================
-		        // PART ONE: MODULUS
-		        // =========================
-		        System.out.println("PART ONE: MODULUS");
-		        // Modulo gives the remainder after division
-		        System.out.println(14 % 13); // 14 ÷ 13 = 1 remainder 1 → prints 1
-		        System.out.println(8 % 11);  // 8 ÷ 11 = 0 remainder 8 → prints 8
-		        System.out.println(6 % 2);   // 6 ÷ 2 = 3 remainder 0 → prints 0
-		        System.out.println(7 % 2);   // 7 ÷ 2 = 3 remainder 1 → prints 1
-		        System.out.println(274 % 10);// 274 ÷ 10 = 27 remainder 4 → prints 4
-		        System.out.println(881 % 2); // 881 ÷ 2 = 440 remainder 1 → prints 1
-		        System.out.println();
+        // Print results of second block
+        System.out.println("a = " + a + ", b = " + b + ", c = " + c);
+        System.out.println(); // Print blank line for spacing
 
-		        // =========================
-		        // PART TWO: COMPOUND OPERATORS
-		        // =========================
-		        System.out.println("PART TWO: COMPOUND OPERATORS");
-		        int x = 0;
-		        int y = 1;
-		        int z = 2;
+        // =====================
+        // PART THREE: CASTING
+        // =====================
+        System.out.println("PART THREE: CASTING"); // Print section title
 
-		        x--;       // x = 0 - 1 → -1
-		        y++;       // y = 1 + 1 → 2
-		        z += y;    // z = 2 + 2 → 4
+        int total = 5 + 7 + 2; // Add numbers together → total = 14
 
-		        System.out.println("After first block: x = " + x + ", y = " + y + ", z = " + z);
+        // Option A: Divide total by 3 first (integer division), then cast to double
+        System.out.println("Option A: " + (double)(total / 3)); // Prints 4.0 (wrong)
 
-		        int a = 3;
-		        int b = 5;
-		        int c = 2;
+        // Option B: Divide total by 3 with integer division (no casting)
+        System.out.println("Option B: " + total / 3); // Prints 4 (wrong)
 
-		        a = c * 2; // a = 2 * 2 → 4
-		        b = b / 2; // b = 5 / 2 → 2 (integer division)
-		        c++;       // c = 2 + 1 → 3
-
-		        System.out.println("After second block: a = " + a + ", b = " + b + ", c = " + c);
-		        System.out.println();
-
-		        // =========================
-		        // PART THREE: CASTING
-		        // =========================
-		        System.out.println("PART THREE: CASTING");
-		        int total = 5 + 7 + 2; // total = 14
-
-		        // Option A: (double) (total / 3)
-		        System.out.println("Option A: " + (double) (total / 3)); 
-		        // Integer division happens first → 14 / 3 = 4 → cast to double → 4.0
-
-		        // Option B: total / 3
-		        System.out.println("Option B: " + total / 3); 
-		        // Integer division only → 14 / 3 = 4
-
-		        // Option C: (double) total / 3
-		        System.out.println("Option C: " + (double) total / 3); 
-		        // Casting happens first → 14.0 / 3 = 4.6667 (correct average)
-		    }
-		}
-
-		
+        // Option C: Cast total to double first, then divide → gives correct average
+        System.out.println("Option C: " + (double)total / 3); // Prints 4.666... (correct)
+    }
+}
