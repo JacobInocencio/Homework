@@ -1,36 +1,28 @@
+/**
+ * n a class called CubeCalculator, accomplish the 
+ * following tasks in the main method. The code must be 
+ * adaptable.
+
+1. Declare a side length as a double 2. Calculate its 
+surface area 3. Calculate its volume 4. Print them as ints 
+(with full sentence) 5. Well documented
+ */
 
 public class CubeCalculator {
 
 	public static void main(String[] args) {
 		
-		        /** 
-		         * 1. Declare the side length of the cube 
-		         * (easily adaptable by changing this value). 
-		         * This line is where you can change the value 
-		         * of the side length and it declares the value 
-		         * of sideLength
-		         */
+		        //This instantiates the side length of the cube as 12.
 		        double sideLength = 12;
 		        
-		        /*
-		         * 2. Calculate the surface area of the cube. 
-		         * This line uses Math.pow to calculate the surface 
-		         * area by first finding the surface area of one side 
-		         * then multiplying by the 6 sides of a cube
-		         */
+		        //This line calculates the surfaceArea of the cube by putting it in an equation and instantiating the result of the equation into the variable surfaceArea.
 		        double surfaceArea = 6 * Math.pow(sideLength, 2);
 
-		        /**
-		         *  3. Calculate the volume of the cube. This line 
-		         *  That line calculates the cube’s volume by raising 
-		         *  the variable sideLength to the power of 3 
-		         *  (sideLength × sideLength × sideLength) and stores 
-		         *  the result in the volume variable.
-		         */
+		        //This line uses an equation to find the volume of the cube and then instantiates the result into the variable volume.
 		        double volume = Math.pow(sideLength, 3);
 
 		        
-		        // 4. Print results as integers (rounded automatically by casting).
+		        //Print results out.
 		        System.out.println("Side length: " + (int)sideLength);
 		        System.out.println("Surface area: " + (int)surfaceArea + " square units");
 		        System.out.println("Volume: " + (int)volume + " cubic units");
@@ -39,3 +31,4 @@ public class CubeCalculator {
 	}
 
 }
+
