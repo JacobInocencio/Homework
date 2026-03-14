@@ -1,27 +1,35 @@
 public boolean firstLast6(int[] nums)  {
 
-  if (nums[0] == 6)
-  {
+  if (nums[0] == 6) {
+    
     return true;
+    
   }
-  if (nums[nums.length-1] == 6)
-  {
+  
+  if (nums[nums.length-1] == 6) {
+    
     return true;
+    
   }
+    
   else return false;
   
 }
 
 public boolean sameFirstLast(int[] nums)  {
   
-  if (nums.length >= 1)
-  {
-    if (nums[0] == nums[nums.length-1])
-    {
+  if (nums.length >= 1) {
+    
+    if (nums[0] == nums[nums.length-1]) {
+      
       return true;
+
     }
+      
     else return false;
+    
   }
+  
   return false;
   
 }
@@ -35,14 +43,18 @@ public int[] makePi()  {
 
 public boolean commonEnd(int[] a, int[] b)  {
   
-  if (a[0] == b[0])
-  {
+  if (a[0] == b[0]) {
+    
     return true;
+    
   }
-  if (a[a.length-1] == b[b.length-1])
-  {
+  
+  if (a[a.length-1] == b[b.length-1]) {
+    
     return true;
+    
   }
+    
   else return false;
   
 }
