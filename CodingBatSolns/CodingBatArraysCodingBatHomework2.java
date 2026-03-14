@@ -21,14 +21,19 @@ public int[] reverse3(int[] nums) {
 public int[] maxEnd3(int[] nums) {
   
   int largestNumber = nums[0];
-  if (nums[2] > largestNumber)
-  {
+  
+  if (nums[2] > largestNumber) {
+    
     largestNumber = nums[2];
+    
   }
-  for (int j = 0; j < nums.length; j++)
-  {
+  
+  for (int j = 0; j < nums.length; j++) {
+    
     nums[j] = largestNumber;
+    
   }
+  
   return nums;
   
 }
@@ -36,15 +41,19 @@ public int[] maxEnd3(int[] nums) {
 public int sum2(int[] nums) {
   
   int combinedNums = 0;
-  if (nums.length == 0)
-  {
+  if (nums.length == 0) {
+    
     return combinedNums;
+    
   }
-  if (nums.length == 1)
-  {
+  
+  if (nums.length == 1) {
+    
     combinedNums = nums[0];
     return combinedNums;
+    
   }
+    
   else combinedNums = nums[0] + nums[1];
   return combinedNums;
   
